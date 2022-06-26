@@ -159,3 +159,14 @@ const emp1 = new Employee(3, 'Ram', 'Developer')
 console.log(emp1.name)
 console.log(emp1.register())
 
+// Generics
+function getArray<T>(items: T[]): T[] {
+    return new Array().concat(items)
+}
+
+let numArray = getArray<number>([1,2,3,4,5])
+let strArray = getArray<string>(['hello','good','all'])
+
+numArray.push(7)
+strArray.push('goal')
+
